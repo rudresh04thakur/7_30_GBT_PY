@@ -13,7 +13,7 @@ print(GBL)
 GBD = {"name":"Gopal","city":"Pune","exp":7,"age":27,"height":5.6} #Dict
 #print(type(GBD))
 GBD["city"]="Nanded"
-print(GBD)
+print(list(GBD))
 GBT = ("Gopal","Pune",7,27,5.6) #tuple
 #print(type(GBT))
 #GBT[1]="Nanded"
@@ -24,9 +24,9 @@ GBTL[1]="Nanded";
 GBT = tuple(GBTL)
 print(GBT)
 
-'''li = ["A","B","C","D","E","F"]
+li = ["A","B","C","D","E","F"]
 
-for x in li[::]:
+'''for x in li[::-1]:
     print(x)
 '''
 
