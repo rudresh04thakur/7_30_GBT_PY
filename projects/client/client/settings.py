@@ -89,18 +89,6 @@ DATABASES = {
         'OPTIONS': {
             'sql_mode': 'traditional',
         }
-    },
-    'mongodb':{
-        'ENGINE':   'django.db.backends.mongodb',
-        'NAME':     'localhost:27017/databaseName',
-        'USER':     'root',
-        'PASSWORD': '',
-    },
-    'oracle': {
-        'ENGINE':   'django.db.backends.oracle',
-        'NAME':     'localhost/databaseName',
-        'USER':     'scott',
-        'PASSWORD': 'tiger',
     }
 }
 

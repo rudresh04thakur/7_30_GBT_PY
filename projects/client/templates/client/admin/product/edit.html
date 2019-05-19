@@ -11,7 +11,7 @@
                 <h3 class="box-title">Edit post-form</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
-            <form role="form" method="POST" class="post-form" action="/list/edit/{{product.id}}">
+            <form role="form" method="POST" class="post-form" action="/list/edit/{{product.id}}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="box-body">
                     <div class="form-group">
@@ -31,6 +31,10 @@
                     <div class="form-group">
                         <label for="exampleInputFile">Quantity</label>
                         <input type="text" name="quantity" maxlength="10" value="{{product.quantity}}" class="form-control" id="id_quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Image</label>
+                        <input type="file" name="image" value="{{product.image}}" id="id_image">
                     </div>
                 </div><!-- /.box-body -->
                 <div class="box-footer">

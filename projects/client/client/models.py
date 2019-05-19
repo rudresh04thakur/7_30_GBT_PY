@@ -123,6 +123,7 @@ class Products(models.Model):
     discription = models.TextField()
     price = models.CharField(max_length=10)
     quantity = models.CharField(max_length=10)
+    image = models.FileField(upload_to='static/client/img/uploads/')
     status = models.CharField(max_length=1,default="0")
     created = models.DateTimeField(auto_now_add=True,null=True)
     modified = models.DateTimeField(auto_now=True,null=True)

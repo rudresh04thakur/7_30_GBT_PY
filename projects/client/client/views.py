@@ -60,7 +60,7 @@ def listProducts(request):
 
 def createProduct(request):
     if request.method == "POST":  
-        form = ProductsForm(request.POST)
+        form = ProductsForm(request.POST,request.FILES)
         if form.is_valid(): 
             try:   
                 form.save() 
@@ -88,7 +88,7 @@ def deleteProduct(request,id):
 def editProduct(request,id):
     product = Products.objects.get(id=id) 
     if request.method == "POST":  
-        form = ProductsForm(request.POST, instance = product)
+        form = ProductsForm(request.POST,request.FILES, instance = product)
         if form.is_valid(): 
             try:   
                 form.save() 
